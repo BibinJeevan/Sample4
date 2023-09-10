@@ -28,18 +28,18 @@ class PasswordException extends Exception
    {
     if(length<6)
       throw new UsernameException("Username must be greater than 6 characters");
-    else if(!password.equals("hello"))
+    else if(!Password.equals("hello"))
       throw new PasswordException("Incorrect Password\n Try Correct Password");
     else
       System.out.println("Login Succesfull!!");
    }
    catch(UsernameException u)
    {
-    u.print StackTrace();
+    u.printStackTrace();
    }
    catch(PasswordException p)
    {
-    p.print StackTrace();
+    p.printStackTrace();
    }
    finally
    {
